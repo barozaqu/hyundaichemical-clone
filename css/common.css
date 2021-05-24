@@ -1,0 +1,29 @@
+@charset "utf-8";
+/*font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900);
+
+/* basic maintenance */
+:root {
+    /* 기본 10pt 기준 */
+    font-size: 62.5%;
+
+    /* color setting */
+    --primary-color : #fff;
+    --secondary-color : #555;
+    --color-black : #111;
+
+    /* font-size setting */
+    --font-regular : 1.6rem; /* 16pt */
+    --font-medium : 3.0rem; /* 30pt */
+    --font-large : 6.0rem; /* 60pt */
+}
+body {
+    font-size: var(--font-regular);
+    font-family:'NotoSans-Medium', '맑은 고딕', 'Malgun Gothic';
+}
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+

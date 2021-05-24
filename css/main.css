@@ -1,0 +1,322 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(common.css);
+@import url(layout.css);
+
+/* header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 999;
+    color: var(--primary-color);
+}
+header .logo {
+    position: absolute;
+    float: left;
+    top: 60px;
+    left: 80px;
+}
+header .logo-color {
+    display: none;
+}
+header .inner {
+    width: 1110px;
+    text-align: center;
+}
+header .gnb .gnb-menu {
+    display: inline-block;
+    position: relative;
+    padding: 70px 30px 40px;
+    vertical-align: top;
+    font-weight: bold;
+}
+header .gnb .gnb-items {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 80px;
+    line-height: 40px;
+    font-weight: normal;
+    color: var(--color-black);
+    /* 
+        *************** 여기 추가된 부분 *************** 
+    */
+    display: none;
+}
+header .gnb-items-wrap {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    height: 410px;
+    background: url(../images/gnb/gnb_twoD_bg1.gif) no-repeat right #efefef;
+    z-index: -3;
+    visibility: hidden;
+}
+header:hover .logo-wht {
+    display: none;
+}
+header:hover .logo-color {
+    display: block;
+}
+.icon-kor-hover {
+    display: none;
+}
+header:hover {
+    background: var(--primary-color);
+    color: var(--color-black);
+}
+/* 
+*************** 여기 추가된 부분 *************** 
+ */
+header:hover .gnb-items {
+    display: block;
+}
+header {
+    transition: all .5s;
+}
+header .gnb-items li:hover {
+    font-weight: bold;
+}
+/* 
+*************** 여기 추가된 부분 *************** 
+ */
+
+header .gnb:hover ~ .gnb-items-wrap {
+    visibility: visible;
+}
+header:hover .icon-kor-hover {
+    display: block;
+}
+header:hover .icon-kor-none {
+    display: none;
+}
+
+header .icon-kor {
+    position: absolute;
+    float: left;
+    top: 0;
+    right: 120px;
+    padding-top: 40px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}
+header .icon-kor p {
+    font-size: 1.4rem;
+}
+header .icon-family {
+    position: absolute;
+    float: left;
+    top: 0;
+    right: 0;
+    padding-top: 40px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    padding-top: 40px;
+    background-color: #010913;
+    color: var(--primary-color);
+    z-index: 3;
+}
+header .icon-family p {
+    font-size: 1.4rem;
+}
+/* section .company */
+section.company {
+    background: url(../images/company/cheMain_visual_img.jpg) no-repeat center/cover;
+    height: 100vh;
+}
+.company-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--primary-color);
+    font-size: var(--font-medium);
+}
+.company-title p {
+    white-space: nowrap;
+}
+.company-title-main {
+    font-size: var(--font-large);
+    font-weight: bold;
+}
+
+/* section .business */
+section.business .business-items .business-items-content {
+    display: inline-block;
+    width: 25%;
+    float: left;
+    overflow: hidden;
+}
+section.business .business-items .business-items-content img {
+    transition: all 500ms;
+    width: 100%;
+    position: relative;
+}
+section.business .business-items .business-items-content:nth-child(5),
+section.business .business-items .business-items-content:nth-child(6),
+section.business .business-items .business-items-content:nth-child(7) {
+    width: 33.3333%;
+}
+section.business .business-items-box {
+    position: relative;
+}
+section.business .business-items-box::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+}
+section.business .business-items-desc {
+    position: absolute;
+    left: 0;
+    padding: 16%;
+    color: var(--primary-color);
+    z-index: 3;
+}
+section.business .business-items-desc p {
+    margin-top: 10px;
+    display: none;
+    font-size: 1.4rem;
+}
+section.business .business-items-box:hover::after {
+    display: block;
+}
+section.business .business-items .business-items-content:hover img {
+    transform: scale(1.2);
+}
+section.business .business-items .business-items-content:hover .business-items-desc p {
+    display: inline-block;
+}
+/* section .career */
+section.career {
+    background: url(../images/career/obkMain_issue_bg.gif) no-repeat center/cover;
+    height: 1250px;
+    /* height: 100vh; */
+
+    /* footer 제외하고 꽉찬 화면 -> footer 스크롤시 올라오는 것
+    animate ? */
+
+    width: 100%;
+    position: relative;
+}
+section.career .career-inner {
+    position: absolute;
+    width: 1200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+section.career .career-items {
+    float: left;
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+section.career .career-img-txt {
+    position: absolute;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    top: 0;
+    left: 0;
+    padding: 13%;
+}
+section.career .career-desc-wrap {
+    background: url(../images/career/bottR_box_bg.png) no-repeat;
+    position: relative;
+    margin-top: 10px;
+    height: 196px;
+    width: 272px;
+}
+section.career .career-desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 100px;
+}
+section.career .career-desc h1 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+section.career .career-desc p {
+    font-size: 1.4rem;
+    white-space: nowrap;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+section.career .career-desc-wrap:hover {
+    background: url(../images/career/bottR_box_bg_on.png) no-repeat;
+    position: relative;
+    margin-right: 10px;
+    height: 196px;
+    width: 272px;
+}
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: url(../images/footer/footer_bg.jpg) #414141;
+}
+footer .footer-menu {
+    position: relative;
+    color: #e9e9e9;
+    width: 1110px;
+}
+footer .footer-menu li {
+    display: inline-block;
+    padding: 20px 0;
+    text-transform: uppercase;
+}
+footer .footer-menu .footer-info {
+    font-weight: bolder;
+}
+footer .footer-menu .footer-family {
+    position: relative;
+    float: right;
+    width: 234px;
+    height: 70px;
+    padding: 30px 20px;
+    margin-right: 5px;
+    text-transform: uppercase;
+    border-left: 1px solid #4e4e4e;
+    border-right: 1px solid #4e4e4e;
+}
+footer .footer-menu .footer-family .footer-family-plus {
+    background: url(../images/footer/ico_family_plus.jpg) no-repeat;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    width: 30px;
+    height: 30px;
+}
+footer .footer-items {
+    color: #b2b2b2;
+    padding-top: 40px;
+    font-size: 1.3rem;
+    width: 1110px;
+}
+footer .footer-items span:nth-child(2n-1) {
+    border-right: 1px solid #b2b2b2;
+    padding-right: 20px;
+}
+footer .footer-items span:nth-child(2n) {
+    padding-left: 20px;
+}
+footer .footer-items span:last-child {
+    display: block;
+    margin-top: 10px;
+    padding: 0;
+}

@@ -1,0 +1,11 @@
+@charset "utf-8";
+.inner {
+    margin: 0 auto;
+    max-width: 1110px;
+}
+header {
+    height: 120px;
+}
+footer {
+    height: 180px;
+}
