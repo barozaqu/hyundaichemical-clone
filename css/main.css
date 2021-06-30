@@ -40,9 +40,6 @@ header .gnb .gnb-items {
     line-height: 40px;
     font-weight: normal;
     color: var(--color-black);
-    /* 
-        *************** 여기 추가된 부분 *************** 
-    */
     display: none;
 }
 header .gnb-items-wrap {
@@ -68,9 +65,6 @@ header:hover {
     background: var(--primary-color);
     color: var(--color-black);
 }
-/* 
-*************** 여기 추가된 부분 *************** 
- */
 header:hover .gnb-items {
     display: block;
 }
@@ -80,10 +74,6 @@ header {
 header .gnb-items li:hover {
     font-weight: bold;
 }
-/* 
-*************** 여기 추가된 부분 *************** 
- */
-
 header .gnb:hover ~ .gnb-items-wrap {
     visibility: visible;
 }
@@ -201,11 +191,6 @@ section.business .business-items .business-items-content:hover .business-items-d
 section.career {
     background: url(../images/career/obkMain_issue_bg.gif) no-repeat center/cover;
     height: 1250px;
-    /* height: 100vh; */
-
-    /* footer 제외하고 꽉찬 화면 -> footer 스크롤시 올라오는 것
-    animate ? */
-
     width: 100%;
     position: relative;
 }
@@ -262,7 +247,6 @@ section.career .career-desc-wrap:hover {
     height: 196px;
     width: 272px;
 }
-
 /* footer */
 footer {
     position: absolute;
